@@ -22,7 +22,7 @@ namespace Roster.Client.Tests
             Assert.Equal(Device.GetNamedSize(NamedSize.Header, typeof(Label)), actual);
         }
 
-        [Fact(DisplayName = "The value of the Title property in the \"TitleLabel\" control should be bound to the \"Title\" property of the BindingContext. @titlelabel-fontsize-header")]
+        [Fact(DisplayName = "The value of the Title property in the \"TitleLabel\" control should be bound to the \"Title\" property of the BindingContext. @titlelabel-text-bind-title")]
         public void TitleLabelBoundPropertyTest()
         {
             var target = new HomeView().TitleLabel as BindableObject;
