@@ -8,7 +8,7 @@ namespace Roster.Client.Tests
         [Fact(DisplayName = "Checking if this works. @check")]
         public void FailTest()
         {
-            Assert.Equal(true, true);
+            Assert.True(false);
         }
     }
 }
