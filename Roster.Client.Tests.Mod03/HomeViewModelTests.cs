@@ -14,7 +14,7 @@ namespace Roster.Client.Tests.Mod03
             MockForms.Init();
             Assembly assembly = typeof(App).Assembly;
             Type target = assembly.GetType("Roster.Client.ViewModels.HomeViewModel");
-            var actual = target != null ? Activator.CreateInstance(target) : default;
+            dynamic actual = target != null ? Activator.CreateInstance(target) : default;
             Assert.True(
                 actual != null,
                 "You need to create a public class named \"HomeViewModel\" in the \"Roster.Client.ViewModels\" namespace."
@@ -27,7 +27,7 @@ namespace Roster.Client.Tests.Mod03
             MockForms.Init();
             Assembly assembly = typeof(App).Assembly;
             Type target = assembly.GetType("Roster.Client.ViewModels.HomeViewModel");
-            var actual = target != null ? Activator.CreateInstance(target) : default;
+            dynamic actual = target != null ? Activator.CreateInstance(target) : default;
             Assert.True(
                 actual is INotifyPropertyChanged,
                 "Your \"HomeViewModel\" class should implement the \"System.ComponentModel.INotifyPropertyChanged\" interface."

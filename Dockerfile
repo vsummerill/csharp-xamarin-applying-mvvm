@@ -16,4 +16,14 @@ USER projects
 
 RUN dotnet build ${APP_DIR}/Roster.Client/Roster.Client.csproj
 
+RUN dotnet build ${APP_DIR}/Roster.Client.Tests.Mod02/Roster.Client.Tests.Mod02.csproj
+
+RUN dotnet build ${APP_DIR}/Roster.Client.Tests.Mod03/Roster.Client.Tests.Mod03.csproj
+
+RUN dotnet build ${APP_DIR}/Roster.Client.Tests.Mod04/Roster.Client.Tests.Mod04.csproj
+
+RUN dotnet build ${APP_DIR}/Roster.Client.Tests.Mod05/Roster.Client.Tests.Mod05.csproj
+
+RUN dotnet build ${APP_DIR}/Roster.Client.Tests.Mod06/Roster.Client.Tests.Mod06.csproj
+
 ENTRYPOINT ["/bin/sh"]
