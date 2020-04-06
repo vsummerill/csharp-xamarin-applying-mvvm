@@ -79,7 +79,7 @@ namespace Roster.Client.Tests.Mod02
             );
         }
         
-        [Fact(DisplayName = "5. Change the TitleLabel's Text property's binding to be a one-time binding - @titlelabel-text-mode")]
+        [Fact(DisplayName = "5. Change the TitleLabel's Text property's binding to be a one-way binding - @titlelabel-text-mode")]
         public void TitleLabelModeTest()
         {
             MockForms.Init();
@@ -94,8 +94,8 @@ namespace Roster.Client.Tests.Mod02
                 "The value of the \"Text\" property in the \"TitleLabel\" control should be data-bound."
             );
             Assert.True(
-                (actual as Binding).Mode == BindingMode.OneTime,
-                "The binding for the \"Text\" property in the \"TitleLabel\" control should have it's \"Mode\" set to \"OneTime\"."
+                (actual as Binding).Mode == BindingMode.OneWay,
+                "The binding for the \"Text\" property in the \"TitleLabel\" control should have it's \"Mode\" set to \"OneWay\"."
             );
         }
     }
