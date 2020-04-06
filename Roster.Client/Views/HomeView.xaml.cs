@@ -1,9 +1,8 @@
-﻿using System.ComponentModel;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Roster.Client.Views
 {
-    [DesignTimeVisible(false)]
+    [System.ComponentModel.DesignTimeVisible(false)]
     public partial class HomeView : ContentPage
     {
         public HomeView()
