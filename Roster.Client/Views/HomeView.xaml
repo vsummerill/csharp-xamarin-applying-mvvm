@@ -2,13 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Roster.Client.Views.HomeView">
-    <StackLayout>
+    <StackLayout Orientation="Vertical">
         <Label x:Name="TitleLabel" x:FieldModifier="public" Text="Title Goes Here" FontSize="12" HorizontalTextAlignment="Center" VerticalOptions="Start" />
-        <StackLayout Orientation="Horizontal">
-            <Entry x:Name="FirstNameEntry" x:FieldModifier="public" Keyboard="Text" Placeholder="First Name" HorizontalOptions="FillAndExpand" />
-            <Entry x:Name="LastNameEntry" x:FieldModifier="public" Keyboard="Text" Placeholder="Last Name" HorizontalOptions="FillAndExpand" />
-            <Button x:Name="AddPersonButton" x:FieldModifier="public" Text="Add Person" HorizontalOptions="End" />
-        </StackLayout>
+        <Button x:Name="AddPersonButton" x:FieldModifier="public" Text="Update Application" />
         <ListView x:Name="PeopleListView" x:FieldModifier="public" VerticalOptions="FillAndExpand">
             <ListView.ItemTemplate>
                 <DataTemplate>
