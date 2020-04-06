@@ -14,4 +14,6 @@ RUN chown -R projects:projects ${APP_DIR}
 
 USER projects
 
+RUN dotnet build ${APP_DIR}/Roster.Client/Roster.Client.csproj
+
 ENTRYPOINT ["/bin/sh"]
