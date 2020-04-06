@@ -1,10 +1,10 @@
-using Xunit;
 using Roster.Client.Views;
+using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Mocks;
-using System.Reflection;
+using Xunit;
 
-namespace Roster.Client.Tests
+namespace Roster.Client.Tests.Mod02
 {
     public class HomeViewTests
     {

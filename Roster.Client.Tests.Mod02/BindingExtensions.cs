@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Xamarin.Forms;
 
-namespace Roster.Client.Tests
+namespace Roster.Client.Tests.Mod02
 {
     internal static class BindingExtensions
     {
