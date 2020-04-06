@@ -1,4 +1,4 @@
-namespace Roster.Client.Tests.Mod04
+namespace Roster.Client.Tests.Mod06
 {
     public class HomeViewModelTests
     {

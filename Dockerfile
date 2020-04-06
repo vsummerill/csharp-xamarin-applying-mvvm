@@ -14,12 +14,4 @@ RUN chown -R projects:projects ${APP_DIR}
 
 USER projects
 
-RUN dotnet build ${APP_DIR}/Roster.Client/Roster.Client.csproj
-
-RUN dotnet build ${APP_DIR}/Roster.Client.Tests.Mod02/Roster.Client.Tests.Mod02.csproj
-
-RUN dotnet build ${APP_DIR}/Roster.Client.Tests.Mod03/Roster.Client.Tests.Mod03.csproj
-
-RUN dotnet build ${APP_DIR}/Roster.Client.Tests.Mod04/Roster.Client.Tests.Mod04.csproj
-
 ENTRYPOINT ["/bin/sh"]
