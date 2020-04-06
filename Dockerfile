@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine
 
-ENV APP_DIR /app
+ENV APP_DIR /src/app
 
 RUN mkdir -p ${APP_DIR}
 
