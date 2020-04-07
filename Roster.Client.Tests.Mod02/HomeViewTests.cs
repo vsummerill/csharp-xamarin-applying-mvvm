@@ -30,7 +30,7 @@ namespace Roster.Client.Tests.Mod02
             var target = new HomeView().TitleLabel as BindableObject;
             var actual = target.GetBinding(Label.TextProperty);
             Assert.True(
-                actual != null,
+                target != null,
                 "You must have a property named \"Text\" in the \"TitleLabel\" control."
             );
             Assert.True(
@@ -50,7 +50,7 @@ namespace Roster.Client.Tests.Mod02
             var target = new HomeView().TitleLabel as BindableObject;
             var actual = target.GetBinding(Label.TextProperty);
             Assert.True(
-                actual != null,
+                target != null,
                 "You must have a property named \"Text\" in the \"TitleLabel\" control."
             );
             Assert.True(
@@ -86,7 +86,7 @@ namespace Roster.Client.Tests.Mod02
             var target = new HomeView().TitleLabel as BindableObject;
             var actual = target.GetBinding(Label.TextProperty);
             Assert.True(
-                actual != null,
+                target != null,
                 "You must have a property named \"Text\" in the \"TitleLabel\" control."
             );
             Assert.True(
