@@ -78,8 +78,13 @@ namespace Roster.Client.Tests.Mod05
                 target != null,
                 "You need to create a public class named `HomeViewModel` in the `Roster.Client.ViewModels` namespace."
             );
+            Type subtarget = GetPersonType();
+            Assert.True(
+                subtarget != null,
+                "You need to create a public class named `Person` in the `Roster.Client.Models` namespace."
+            );
             Type actual = target.GetType();
-            var expected = typeof(ObservableCollection<>).MakeGenericType(GetPersonType());
+            var expected = typeof(ObservableCollection<>).MakeGenericType(subtarget);
             Assert.True(
                 actual.GetProperties().Any(p => p.Name == "People" && p.PropertyType == expected),
                 "Your `HomeViewModel` class must include a public property of type `ObservableCollection<Person>` exactly named `People`."
@@ -93,6 +98,21 @@ namespace Roster.Client.Tests.Mod05
             Assert.True(
                 target != null,
                 "You need to create a public class named `HomeViewModel` in the `Roster.Client.ViewModels` namespace."
+            );
+            Type subtarget = GetPersonType();
+            Assert.True(
+                subtarget != null,
+                "You need to create a public class named `Person` in the `Roster.Client.Models` namespace."
+            );
+            Type dermtarget = target.GetType();
+            var expected = typeof(ObservableCollection<>).MakeGenericType(subtarget);
+            Assert.True(
+                dermtarget.GetProperties().Any(p => p.Name == "People" && p.PropertyType == expected),
+                "Your `HomeViewModel` class must include a public property of type `ObservableCollection<Person>` exactly named `People`."
+            );
+            Assert.True(
+                target.People != null,
+                "You must instantiate the `People` property of the `HomeViewModel` class."
             );
             List<dynamic> actual = new List<dynamic>();
             foreach(dynamic person in target.People) { actual.Add(person); }
