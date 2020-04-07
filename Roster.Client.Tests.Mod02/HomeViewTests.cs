@@ -30,10 +30,6 @@ namespace Roster.Client.Tests.Mod02
             var target = new HomeView().TitleLabel as BindableObject;
             var actual = target.GetBinding(Label.TextProperty);
             Assert.True(
-                target != null,
-                "You must have a property named `Text` in the `TitleLabel` control."
-            );
-            Assert.True(
                 actual is Binding,
                 "The value of the `Text` property in the `TitleLabel` control should be data-bound."
             );
@@ -49,10 +45,6 @@ namespace Roster.Client.Tests.Mod02
             MockForms.Init();
             var target = new HomeView().TitleLabel as BindableObject;
             var actual = target.GetBinding(Label.TextProperty);
-            Assert.True(
-                target != null,
-                "You must have a property named `Text` in the `TitleLabel` control."
-            );
             Assert.True(
                 actual is Binding,
                 "The value of the `Text` property in the `TitleLabel` control should be data-bound."
@@ -85,10 +77,6 @@ namespace Roster.Client.Tests.Mod02
             MockForms.Init();
             var target = new HomeView().TitleLabel as BindableObject;
             var actual = target.GetBinding(Label.TextProperty);
-            Assert.True(
-                target != null,
-                "You must have a property named `Text` in the `TitleLabel` control."
-            );
             Assert.True(
                 actual is Binding,
                 "The value of the `Text` property in the `TitleLabel` control should be data-bound."

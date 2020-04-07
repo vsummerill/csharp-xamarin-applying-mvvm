@@ -24,8 +24,8 @@ namespace Roster.Client.Tests.Mod03
             return instance;
         }
 
-        [Fact(DisplayName = "1. Create a HomeViewModel Class - @class-exists")]
-        public void ClassExistsTest()
+        [Fact(DisplayName = "1. Create a HomeViewModel Class - @homeviewmodel-class-exists")]
+        public void HomeViewModelClassExistsTest()
         {
             dynamic actual = GetHomeViewModel();
             Assert.True(
@@ -35,7 +35,7 @@ namespace Roster.Client.Tests.Mod03
         }
 
         [Fact(DisplayName = "2. Implement the INotifyPropertyChanged Interface - @class-implements-inotifypropertychanged-interface")]
-        public void ClassImplementsInterfaceTest()
+        public void HomeViewModelClassImplementsInterfaceTest()
         {
             dynamic actual = GetHomeViewModel();
             Assert.True(
@@ -49,7 +49,7 @@ namespace Roster.Client.Tests.Mod03
         }
 
         [Fact(DisplayName = "3. Add a New Title String Property - @title-string-property")]
-        public void ClassTitleStringPropertyTest()
+        public void HomeViewModelClassTitleStringPropertyTest()
         {
             dynamic target = GetHomeViewModel();
             Assert.True(
@@ -64,7 +64,7 @@ namespace Roster.Client.Tests.Mod03
         }
 
         [Fact(DisplayName = "4. Update the Title String Property's Default Value - @title-default-value")]
-        public void ClassTitleDefaultValueTest()
+        public void HomeViewModelClassTitleDefaultValueTest()
         {
             dynamic target = GetHomeViewModel();
             Assert.True(
@@ -83,7 +83,7 @@ namespace Roster.Client.Tests.Mod03
         }
 
         [Fact(DisplayName = "5. Add a New Command - @new-command")]
-        public void ClassAddNewCommand()
+        public void HomeViewModelClassAddNewCommand()
         {
             dynamic target = GetHomeViewModel();
             Assert.True(
