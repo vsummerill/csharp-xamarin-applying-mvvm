@@ -8,7 +8,6 @@
         <ListView x:Name="PeopleListView" x:FieldModifier="public" VerticalOptions="FillAndExpand">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
