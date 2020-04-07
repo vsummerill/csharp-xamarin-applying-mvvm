@@ -105,7 +105,7 @@ namespace Roster.Client.Tests.Mod03
             var actual = target.BindingContext;
             Assert.True(
                 actual != null,
-                "You `HomeView` control must have some value set as it's `BindingContext` in the class file (code-behind)."
+                "Your `HomeView` control must have some value set as it's `BindingContext` in the class file (code-behind)."
             );
             Assert.True(
                 actual.GetType().IsAssignableFrom(GetHomeViewModelType()),

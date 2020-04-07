@@ -63,7 +63,7 @@ namespace Roster.Client.Tests.Mod02
             var actual = target.BindingContext;
             Assert.True(
                 actual != null,
-                "You `HomeView` control must have some value set as it's `BindingContext` in the class file (code-behind)."
+                "Your `HomeView` control must have some value set as it's `BindingContext` in the class file (code-behind)."
             );
             Assert.True(
                 (actual.GetType().GetRuntimeProperty("Title")?.GetValue(actual) as string) == "Roster App",

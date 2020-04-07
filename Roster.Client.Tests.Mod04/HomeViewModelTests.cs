@@ -13,6 +13,10 @@ namespace Roster.Client.Tests.Mod04
         {
             Xamarin.Forms.Mocks.MockForms.Init();
             dynamic target = new Views.HomeView()?.BindingContext;
+            Assert.True(
+                target != null,
+                "Your `HomeView` control must have some value set as it's `BindingContext` in the class file (code-behind)."
+            );
             Command actual = target.UpdateApplicationCommand;
             Assert.True(
                 actual != null,
@@ -25,6 +29,10 @@ namespace Roster.Client.Tests.Mod04
         {
             MockForms.Init();
             dynamic target = new HomeView()?.BindingContext;
+            Assert.True(
+                target != null,
+                "Your `HomeView` control must have some value set as it's `BindingContext` in the class file (code-behind)."
+            );
             Command subtarget = target.UpdateApplicationCommand;
             Assert.True(
                 subtarget != null,
@@ -78,6 +86,10 @@ namespace Roster.Client.Tests.Mod04
         {
             MockForms.Init();
             dynamic target = new HomeView()?.BindingContext;
+            Assert.True(
+                target != null,
+                "Your `HomeView` control must have some value set as it's `BindingContext` in the class file (code-behind)."
+            );
             bool actual = false;
             target.PropertyChanged += new PropertyChangedEventHandler((sender, e) => { actual = true; });
             target.Title = "Roster App - Changed";
