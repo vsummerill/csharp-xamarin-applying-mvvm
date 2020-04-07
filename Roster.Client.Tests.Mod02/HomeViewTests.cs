@@ -15,11 +15,11 @@ namespace Roster.Client.Tests.Mod02
             var actual = new HomeView().TitleLabel.GetValue(Label.FontSizeProperty);
             Assert.True(
                 actual != null,
-                "You must have a property named \"FontSize\" in the \"TitleLabel\" control."
+                "You must have a property named `FontSize` in the `TitleLabel` control."
             );
             Assert.True(
                 (double)actual == Device.GetNamedSize(NamedSize.Header, typeof(Label)),
-                "The value of the \"FontSize\" property in the \"TitleLabel\" control should be set to \"Header\"."
+                "The value of the `FontSize` property in the `TitleLabel` control should be set to `Header`."
             );
         }
 
@@ -31,19 +31,19 @@ namespace Roster.Client.Tests.Mod02
             var actual = target.GetBinding(Label.TextProperty);
             Assert.True(
                 target != null,
-                "You must have a property named \"Text\" in the \"TitleLabel\" control."
+                "You must have a property named `Text` in the `TitleLabel` control."
             );
             Assert.True(
                 actual is Binding,
-                "The value of the \"Text\" property in the \"TitleLabel\" control should be data-bound."
+                "The value of the `Text` property in the `TitleLabel` control should be data-bound."
             );
             Assert.True(
                 (actual as Binding).Path == "Title",
-                "The value of the \"Text\" property in the \"TitleLabel\" control should be data-bound to the \"Title\" property of the BindingContext."
+                "The value of the `Text` property in the `TitleLabel` control should be data-bound to the `Title` property of the BindingContext."
             );
         }
 
-        [Fact(DisplayName = "3. Change the TitleLabel's Text property's binding to have a fallback value of \"Header\" - @titlelabel-text-fallbackvalue")]
+        [Fact(DisplayName = "3. Change the TitleLabel's Text property's binding to have a fallback value of `Header` - @titlelabel-text-fallbackvalue")]
         public void TitleLabelFallbackValueTest()
         {
             MockForms.Init();
@@ -51,19 +51,19 @@ namespace Roster.Client.Tests.Mod02
             var actual = target.GetBinding(Label.TextProperty);
             Assert.True(
                 target != null,
-                "You must have a property named \"Text\" in the \"TitleLabel\" control."
+                "You must have a property named `Text` in the `TitleLabel` control."
             );
             Assert.True(
                 actual is Binding,
-                "The value of the \"Text\" property in the \"TitleLabel\" control should be data-bound."
+                "The value of the `Text` property in the `TitleLabel` control should be data-bound."
             );
             Assert.True(
                 ((actual as Binding).FallbackValue as string) == "Header",
-                "The binding for the \"Text\" property in the \"TitleLabel\" control should have it's \"FallbackValue\" set to \"Header\"."
+                "The binding for the `Text` property in the `TitleLabel` control should have it's `FallbackValue` set to `Header`."
             );
         }
 
-        [Fact(DisplayName = "4. Add a simple data context with a Title property set to \"Roster App\" - @bindingcontext-title")]
+        [Fact(DisplayName = "4. Add a simple data context with a Title property set to `Roster App` - @bindingcontext-title")]
         public void HomeViewBindingContextTest()
         {
             MockForms.Init();
@@ -71,11 +71,11 @@ namespace Roster.Client.Tests.Mod02
             var actual = target.BindingContext;
             Assert.True(
                 actual != null,
-                "You \"HomeView\" control must have some value set as it's \"BindingContext\" in the class file (code-behind)."
+                "You `HomeView` control must have some value set as it's `BindingContext` in the class file (code-behind)."
             );
             Assert.True(
                 (actual.GetType().GetRuntimeProperty("Title")?.GetValue(actual) as string) == "Roster App",
-                "The value of the \"BindingContext\" property of the \"HomeView\" control should be bound to an object with a property named \"Title\" and the property set to a value of \"Roster App\"."
+                "The value of the `BindingContext` property of the `HomeView` control should be bound to an object with a property named `Title` and the property set to a value of `Roster App`."
             );
         }
         
@@ -87,15 +87,15 @@ namespace Roster.Client.Tests.Mod02
             var actual = target.GetBinding(Label.TextProperty);
             Assert.True(
                 target != null,
-                "You must have a property named \"Text\" in the \"TitleLabel\" control."
+                "You must have a property named `Text` in the `TitleLabel` control."
             );
             Assert.True(
                 actual is Binding,
-                "The value of the \"Text\" property in the \"TitleLabel\" control should be data-bound."
+                "The value of the `Text` property in the `TitleLabel` control should be data-bound."
             );
             Assert.True(
                 (actual as Binding).Mode == BindingMode.OneWay,
-                "The binding for the \"Text\" property in the \"TitleLabel\" control should have it's \"Mode\" set to \"OneWay\"."
+                "The binding for the `Text` property in the `TitleLabel` control should have it's `Mode` set to `OneWay`."
             );
         }
     }
