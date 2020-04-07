@@ -75,7 +75,7 @@ namespace Roster.Client.Tests.Mod06
                 );
             }
             Assert.True(
-                cells?.All(i => i is TextCell),
+                cells.Any() && cells.All(i => i is TextCell),
                 "The `DataTemplate` property of the `PeopleListView` control should contain a single `TextCell` control."
             );
         }
@@ -113,7 +113,7 @@ namespace Roster.Client.Tests.Mod06
                 );
             }
             Assert.True(
-                cells?.All(i => i is TextCell),
+                cells.Any() && cells.All(i => i is TextCell),
                 "The `DataTemplate` property of the `PeopleListView` control should contain a single `TextCell` control."
             );
             Assert.True(
@@ -155,7 +155,7 @@ namespace Roster.Client.Tests.Mod06
                 );
             }
             Assert.True(
-                cells?.All(i => i is TextCell),
+                cells.Any() && cells.All(i => i is TextCell),
                 "The `DataTemplate` property of the `PeopleListView` control should contain a single `TextCell` control."
             );
             Assert.True(
