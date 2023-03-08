@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Roster.Client.ViewModels;
+using Xamarin.Forms;
 
 namespace Roster.Client.Views
 {
@@ -9,10 +10,7 @@ namespace Roster.Client.Views
         {
             InitializeComponent();
 
-            BindingContext = new
-            {
-                Title = "Roster App"
-            };
+            BindingContext = new HomeViewModel();
 
         }
     }
